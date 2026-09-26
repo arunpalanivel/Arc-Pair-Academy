@@ -1,5 +1,5 @@
 export const ACADEMY_DATA = {
-  announcement: "Campus Partnerships Open for 2026-2027 Academic Batches — Free Pilot Workshop Available for TPOs & HODs",
+  announcement: "Campus Partnerships Open • Practical AI Programs For Colleges",
 
   codeSnippets: {
     fastapi: {
@@ -60,20 +60,19 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]`
   },
 
   proofPoints: [
-    { title: "Zero Fluff", desc: "No theoretical slide-decks or generic lectures" },
-    { title: "100% on GitHub", desc: "Every project hosted, reviewed & verifiable" },
-    { title: "Zero False Guarantees", desc: "Honest, battle-tested engineering skills" },
-    { title: "Real Toolchains", desc: "Docker, FastAPI, LangChain, pgvector" }
+    { title: "Project-First", desc: "Every major concept leads to implementation." },
+    { title: "Build With Real Tools", desc: "Python + FastAPI + Ollama RAG + GitHub" },
+    { title: "Debug, Don't Copy", desc: "Students learn to inspect, break and fix their code" },
+    { title: "Show Your Work", desc: "Projects + GitHub Documentation + Demo" }
   ],
 
   pipelineStages: [
-    { id: "01", name: "Understand", label: "01 - Req", desc: "Problem framing, dataset boundary definition, baseline performance metrics." },
-    { id: "02", name: "Explore", label: "02 - Raw", desc: "Data parsing, chunking strategy comparison, embedding model benchmarks." },
-    { id: "03", name: "Design", label: "03 - Arch", desc: "Vector DB topology, memory/state store selection, API schema design." },
-    { id: "04", name: "Build", label: "04 - Core", desc: "FastAPI REST API, LangChain chain orchestration, structured output validation." },
-    { id: "05", name: "Test", label: "05 - Eval", desc: "Groundedness checks, latency optimization, hallucination rate evaluation." },
-    { id: "06", name: "Deploy", label: "06 - Prod", desc: "Docker containerization, CI/CD pipeline push, public review URL live." },
-    { id: "07", name: "Improve", label: "07 - Loop", desc: "User feedback ingestion, telemetry logging, API documentation sync." }
+    { id: "01", name: "Understand", label: "01 - Understand", desc: "Learn the concept." },
+    { id: "02", name: "Explore", label: "02 - Explore", desc: "Experiment with the technology." },
+    { id: "03", name: "Build", label: "03 - Build", desc: "Write the application." },
+    { id: "04", name: "Debug", label: "04 - Debug", desc: "Break it. Read the error. Fix it." },
+    { id: "05", name: "Extend", label: "05 - Extend", desc: "Add something more." },
+    { id: "06", name: "Showcase", label: "06 - Showcase", desc: "Document it, push it to GitHub and demonstrate it." }
   ],
 
   pedagogyStages: [
@@ -145,26 +144,26 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]`
   modules: [
     {
       id: "mod-1",
-      number: "Module 01",
-      title: "AI Education & Foundations",
-      desc: "A real look at how LLMs work under the hood: tokens, context windows, prompt engineering, and structured evaluation.",
-      tags: ["Tokens", "Prompt Design", "Embeddings", "Context Windows"],
+      number: "01",
+      title: "AI Foundations",
+      desc: "Understand how modern AI and LLMs work, including tokens, context, prompting, structured outputs and limitations.",
+      tags: ["LLMs", "Prompting", "Python", "AI Fundamentals"],
       details: "Students gain an intuitive and mathematical understanding of vector spaces, temperature parameters, and system prompts."
     },
     {
       id: "mod-2",
-      number: "Module 02",
+      number: "02",
       title: "AI Application Development",
-      desc: "Build production-style apps with retrieval-augmented generation (RAG), vector databases, and tool-calling agents.",
-      tags: ["pgvector", "LangChain", "FastAPI", "RAG Pipeline"],
+      desc: "Build applications using Python, FastAPI, Ollama, embeddings, RAG and GitHub.",
+      tags: ["Python", "FastAPI", "Ollama", "RAG", "GitHub"],
       details: "Build and deploy production-grade API endpoints wrapping vector databases and custom knowledge retrieval chains."
     },
     {
       id: "mod-3",
-      number: "Module 03",
-      title: "AI Automation Systems",
-      desc: "Create event-driven workflows, automated document processing pipelines, and lightweight agentic automation.",
-      tags: ["Agent Workflows", "Webhooks", "Docker", "LangGraph"],
+      number: "03",
+      title: "AI Projects & Automation",
+      desc: "Apply AI to real-world problems through guided projects, tool integration and automation workflows.",
+      tags: ["AI Tools", "APIs", "Workflows", "Projects"],
       details: "Connect AI agents to real-world triggers, databases, Slack/Email webhooks, and containerized cloud runners."
     }
   ],

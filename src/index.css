@@ -79,9 +79,9 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-  font-size: clamp(38px, 5.5vw, 72px);
-  line-height: 0.98;
-  margin-bottom: 24px;
+  font-size: clamp(28px, 3.8vw, 52px);
+  line-height: 1.05;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -245,6 +245,32 @@ main {
   gap: 12px;
 }
 
+/* Header text-style CTA — no fill, no border box */
+.nav-partner-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 4px;
+  border-bottom: 2px solid var(--ink);
+  transition: color 0.15s ease, border-color 0.15s ease, gap 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-partner-btn:hover {
+  color: var(--red);
+  border-color: var(--red);
+  gap: 10px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -253,12 +279,12 @@ main {
   padding: 10px 22px;
   font-size: 15px;
   font-weight: 700;
-  background: var(--ink);
-  color: var(--paper);
+  background: #ffffff;
+  color: var(--ink);
   border: 2px solid var(--line);
   box-shadow: var(--card-shadow);
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.25s ease, color 0.25s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, color 0.2s ease;
   -webkit-user-select: none;
   user-select: none;
   white-space: nowrap;
@@ -267,6 +293,7 @@ main {
 .button:hover {
   transform: translate(-2px, -2px);
   box-shadow: var(--card-shadow-hover);
+  background: var(--paper-deep);
 }
 
 .button:active {
@@ -274,9 +301,10 @@ main {
   box-shadow: 1px 1px 0px var(--line);
 }
 
+/* Variant hover colors — background appears ONLY on hover */
 .button.dark:hover {
-  background: #27272a;
-  color: var(--yellow);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .button.yellow:hover {
@@ -291,7 +319,7 @@ main {
 
 .button.secondary:hover,
 .button.light:hover {
-  background: var(--paper-light);
+  background: var(--paper-deep);
   color: var(--ink);
 }
 
@@ -326,9 +354,9 @@ main {
 }
 
 .hero-copy p {
-  font-size: 18px;
+  font-size: 15px;
   color: var(--muted);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   font-weight: 500;
 }
 
@@ -347,7 +375,7 @@ main {
 }
 
 .proof-strip article {
-  padding: 24px 28px;
+  padding: 40px 28px;
   border-right: 2px solid var(--line);
   display: flex;
   flex-direction: column;

@@ -10,19 +10,20 @@ export default function Home({ onOpenPilotModal }) {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-copy">
+          <small style={{ textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', fontSize: '12px', color: 'var(--red)', marginBottom: '8px', display: 'block' }}>Arc Pair Academy</small>
           <h1>
             Learn AI.<br />
-            Create What's Next.
+            Build With AI.
           </h1>
           <p>
-            Practical AI education for students and faculties who refuse passive slide-decks. We build real applications, retrieval-augmented systems, and deploy verifiable code directly to GitHub.
+            Practical AI education for students and faculty — from understanding modern AI to building, debugging and showcasing working applications.
           </p>
           <div className="action-row">
             <Link className="button dark" to="/programs">
               Explore Programs <ArrowRight size={16} />
             </Link>
             <button className="button red" onClick={onOpenPilotModal}>
-              Partner With Us (TPO / Colleges)
+              Partner With Us <ArrowRight size={16} />
             </button>
           </div>
         </div>
@@ -57,41 +58,44 @@ export default function Home({ onOpenPilotModal }) {
           <div className="campus-copy">
             <h2>Bring practical AI learning to your campus</h2>
             <p>
-              Colleges do not need more theoretical seminars. Arc Pair Academy runs zero-cost pilot workshops, then a structured 12-day bootcamp with before-and-after outcome reports for every batch.
+              Give students hands-on exposure to modern AI application development — not another theory-heavy seminar. Arc Pair Academy offers practical workshops and structured 12-day cohorts where students learn, build, debug and showcase working applications.
             </p>
 
             <div className="mini-grid">
               <article>
-                <strong>Free Pilot Workshop</strong>
-                <span>Test the pedagogy with a small student group.</span>
+                <strong>1-2 Day Workshops</strong>
+                <span>Focused practical AI experiences for colleges that want a workshop without enrolling students in the full cohort.</span>
+                <Link className="button secondary" to="/workshops" style={{ marginTop: '12px', fontSize: '12px', padding: '6px 14px' }}>View Workshops <ArrowRight size={12} /></Link>
               </article>
               <article>
-                <strong>Baseline vs. Final Report</strong>
-                <span>An objective before/after skills audit.</span>
+                <strong>12-Day Practical AI Cohort</strong>
+                <span>Project-based AI application development with Python, FastAPI, Ollama, RAG and GitHub.</span>
+                <button className="button secondary" onClick={onOpenPilotModal} style={{ marginTop: '12px', fontSize: '12px', padding: '6px 14px' }}>View Cohort <ArrowRight size={12} /></button>
               </article>
               <article>
-                <strong>Capstone Repos</strong>
-                <span>Real, working software delivered before graduation.</span>
+                <strong>Campus Hackathon</strong>
+                <span>A 12-Hour AI hackathon available as part of this larger campus cohort package.</span>
+                <Link className="button secondary" to="/for-colleges" style={{ marginTop: '12px', fontSize: '12px', padding: '6px 14px' }}>Explore Campus Programs <ArrowRight size={12} /></Link>
               </article>
             </div>
 
             <div className="action-row">
-              <button className="button yellow" onClick={onOpenPilotModal}>
-                Request College Partnership & Syllabus PDF
+              <button className="button dark" onClick={onOpenPilotModal}>
+                Request College Partnership &amp; Syllabus PDF
               </button>
-              <Link className="button secondary" to="/for-colleges">
-                View Full MOU Details
+              <Link className="button red" to="/for-colleges">
+                View Full MOU Details <ArrowRight size={16} />
               </Link>
             </div>
           </div>
 
           <div className="stats-panel">
             <strong>12</strong>
-            <span>Days / 4 weeks</span>
+            <span>Days • 4 Weeks</span>
             <strong>6</strong>
-            <span>Stage applied pedagogy</span>
+            <span>Stage Learning Framework</span>
             <strong>100%</strong>
-            <span>Hosted on GitHub</span>
+            <span>Project-Focused</span>
           </div>
         </div>
       </section>
@@ -100,13 +104,13 @@ export default function Home({ onOpenPilotModal }) {
       <section className="section" id="programs">
         <div className="section-intro">
           <div>
-            <h2>What We Teach & Build</h2>
+            <h2>What We Teach &amp; Build</h2>
             <p style={{ color: 'var(--muted)', margin: 0 }}>
-              Hands-on modules focused on immediate production capability.
+              Hands-on modules focused on real-world AI application development.
             </p>
           </div>
           <Link className="button secondary" to="/programs">
-            View All Syllabus Specs &gt;
+            View Full Curriculum <ArrowRight size={14} />
           </Link>
         </div>
 
@@ -128,61 +132,68 @@ export default function Home({ onOpenPilotModal }) {
 
       {/* Pipeline Stepper Section */}
       <section className="section muted">
-        <h2>From prompt to product: the pipeline</h2>
+        <h2>From Understanding to Showcase</h2>
         <p style={{ color: 'var(--muted)', maxWidth: '640px' }}>
-          Every engineering cohort works through our 7-stage production workflow from initial constraint framing to containerized deployment.
+          Our 6-stage learning framework for practical AI education.
         </p>
         <PipelineStepper />
       </section>
 
       {/* Curriculum Tracks */}
       <section className="section">
-        <h2>Curriculum Tracks</h2>
+        <h2>Choose Your Campus Cohort</h2>
         <p style={{ color: 'var(--muted)', marginBottom: '32px' }}>
-          Two campus-ready formats, plus a standalone track for working professionals.
+          The same 12-day practical AI program, with additional institutional experiences based on cohort size.
         </p>
 
         <div className="card-grid three">
           <article className="program-card">
-            <span className="ribbon dark-ribbon">1-2 Days</span>
-            <h3>AI Foundations Workshop</h3>
-            <p>Fast-paced entry point for engineering cohorts to demystify generative AI hands-on.</p>
+            <h3>Campus AI Cohort <span style={{ fontSize: '13px', fontWeight: '500', color: 'var(--muted)' }}>60+ Students</span></h3>
             <ul>
-              <li>LLM parameters and temperature control</li>
-              <li>Prompting and structured JSON output basics</li>
-              <li>One verified working GitHub repo by end of day</li>
+              <li>10-Day Student Cohort</li>
+              <li>1-Day Faculty Development Programme</li>
             </ul>
-            <Link className="button secondary block" to="/programs">
-              View Track Syllabus
-            </Link>
+            <div style={{ margin: '16px 0', borderTop: '2px solid var(--line)', paddingTop: '12px' }}>
+              <strong style={{ fontSize: '22px' }}>₹2,000</strong>
+              <span style={{ color: 'var(--muted)', fontSize: '13px' }}> / student</span>
+            </div>
+            <button className="button dark block" onClick={onOpenPilotModal}>
+              View Cohort <ArrowRight size={14} />
+            </button>
           </article>
 
           <article className="program-card" style={{ border: '3px solid var(--red)' }}>
-            <span className="ribbon red-ribbon">Flagship — 12 Days</span>
-            <h3>AI Application Development</h3>
-            <p>Our core cohort program. Build a full RAG pipeline, deploy it, and defend it live on demo day.</p>
+            <span className="ribbon red-ribbon">Most Popular</span>
+            <h3>Campus AI Plus <span style={{ fontSize: '13px', fontWeight: '500', color: 'var(--muted)' }}>120+ Students</span></h3>
             <ul>
-              <li>FastAPI, LangChain, RAG architecture and retrieval</li>
-              <li>Tool calling and structured, validated outputs</li>
-              <li>Complete capstone hosted and demoed publicly</li>
+              <li>12-Day Student Cohort</li>
+              <li>1-Day Faculty Development Programme</li>
+              <li>1-Day Student AI Workshop</li>
             </ul>
+            <div style={{ margin: '16px 0', borderTop: '2px solid var(--line)', paddingTop: '12px' }}>
+              <strong style={{ fontSize: '22px' }}>₹2,000</strong>
+              <span style={{ color: 'var(--muted)', fontSize: '13px' }}> / student</span>
+            </div>
             <button className="button yellow block" onClick={onOpenPilotModal}>
-              Enroll / Apply for Cohort
+              View Cohort <ArrowRight size={14} />
             </button>
           </article>
 
           <article className="program-card">
-            <span className="ribbon blue-ribbon">Advanced</span>
-            <h3>AI Automation Systems</h3>
-            <p>For senior undergraduates and developers building autonomous webhooks and event-driven agents.</p>
+            <h3>Campus AI Challenge <span style={{ fontSize: '13px', fontWeight: '500', color: 'var(--muted)' }}>200-250+ Students</span></h3>
             <ul>
-              <li>LangGraph multi-agent orchestration</li>
-              <li>Vector store indexing and memory persistence</li>
-              <li>Docker containerization and cloud deployment</li>
+              <li>1-Day Student Cohort</li>
+              <li>1-Day Faculty Development Programme</li>
+              <li>12-Hour AI Hackathon</li>
+              <li>₹50,000 Prize Pool</li>
             </ul>
-            <Link className="button dark block" to="/programs">
-              Explore Automation Track
-            </Link>
+            <div style={{ margin: '16px 0', borderTop: '2px solid var(--line)', paddingTop: '12px' }}>
+              <strong style={{ fontSize: '22px' }}>₹2,000</strong>
+              <span style={{ color: 'var(--muted)', fontSize: '13px' }}> / student</span>
+            </div>
+            <button className="button dark block" onClick={onOpenPilotModal}>
+              View Cohort <ArrowRight size={14} />
+            </button>
           </article>
         </div>
       </section>
@@ -245,17 +256,17 @@ export default function Home({ onOpenPilotModal }) {
       >
         <h2 style={{ fontSize: 'clamp(32px, 5vw, 56px)', color: 'var(--paper)', marginBottom: '16px' }}>
           Don't just collect certificates.<br />
-          <span style={{ color: 'var(--yellow)' }}>Build skills.</span>
+          <span style={{ color: 'var(--yellow)' }}>Build Skills.</span>
         </h2>
         <p style={{ color: '#a1a1aa', maxWidth: '640px', margin: '0 auto 32px auto', fontSize: '18px' }}>
-          Every line of code committed to GitHub. Every project reviewed. Real engineering practice over a printed badge.
+          Students leave with practical coding experience, working applications, a GitHub repository and a final project showcase — not just a certificate.
         </p>
         <div className="action-row" style={{ justifyContent: 'center' }}>
           <Link className="button yellow" to="/programs">
-            Join Upcoming Cohort
+            Explore The Cohort <ArrowRight size={16} />
           </Link>
-          <button className="button light" onClick={onOpenPilotModal}>
-            Request College Pilot
+          <button className="button red" onClick={onOpenPilotModal}>
+            Partner With Us <ArrowRight size={16} />
           </button>
         </div>
       </section>

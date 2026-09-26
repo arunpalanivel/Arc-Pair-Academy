@@ -13,10 +13,6 @@ export default function Navbar({ onOpenPilotModal }) {
     localStorage.setItem('arc_theme', theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
-  };
-
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -74,32 +70,18 @@ export default function Navbar({ onOpenPilotModal }) {
             Projects
           </Link>
           <Link 
-            className={`nav-link ${isActive('/workshops') ? 'active' : ''}`} 
-            to="/workshops" 
-            onClick={() => setMobileOpen(false)}
-          >
-            Workshops
-          </Link>
-          <Link 
             className={`nav-link ${isActive('/about') ? 'active' : ''}`} 
             to="/about" 
             onClick={() => setMobileOpen(false)}
           >
             About
           </Link>
-          <Link 
-            className={`nav-link ${isActive('/contact') ? 'active' : ''}`} 
-            to="/contact" 
-            onClick={() => setMobileOpen(false)}
-          >
-            Contact
-          </Link>
         </nav>
 
         {/* Header Actions */}
         <div className="header-actions">
-          <button className="button yellow" onClick={onOpenPilotModal}>
-            Partner With Us
+          <button className="nav-partner-btn" onClick={onOpenPilotModal}>
+            Partner With Us <ArrowRight size={14} />
           </button>
         </div>
       </header>
