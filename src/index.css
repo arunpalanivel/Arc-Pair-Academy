@@ -330,6 +330,11 @@ main {
 
 .button.block {
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
 }
 
 .button:disabled {
@@ -362,8 +367,9 @@ main {
 
 .action-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 16px;
+  align-items: center;
 }
 
 /* Proof Strip */
