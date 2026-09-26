@@ -887,8 +887,8 @@ main {
 
 /* Footer */
 .site-footer {
-  background: var(--ink);
-  color: var(--paper);
+  background: #ffffff;
+  color: var(--ink);
   padding: 64px 32px 32px 32px;
   border-top: 3px solid var(--line);
 }
@@ -909,22 +909,22 @@ main {
 }
 
 .footer-brand h2 {
-  color: var(--yellow);
+  color: var(--ink);
   margin-bottom: 8px;
   font-size: 32px;
 }
 
 .footer-brand p {
-  color: #a1a1aa;
+  color: var(--muted);
   max-width: 400px;
   font-size: 14px;
 }
 
 .footer-column h3 {
-  color: var(--yellow);
+  color: var(--ink);
   font-size: 16px;
   margin-bottom: 18px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--line);
   padding-bottom: 8px;
 }
 
@@ -935,7 +935,7 @@ main {
 }
 
 .footer-column a {
-  color: #ccc;
+  color: var(--muted);
   font-size: 14px;
   transition: color 0.15s ease, transform 0.15s ease;
 }
@@ -946,13 +946,13 @@ main {
 }
 
 .footer-bottom {
-  border-top: 2px solid #333;
+  border-top: 2px solid var(--line);
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
-  color: #888;
+  color: var(--muted);
 }
 
 .footer-bottom nav {
