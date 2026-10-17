@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { X, CheckCircle, Building, Mail, Phone, User, Calendar } from 'lucide-react';
 
 export default function PilotModal({ isOpen, onClose, onSubmitted }) {
@@ -15,6 +15,64 @@ export default function PilotModal({ isOpen, onClose, onSubmitted }) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const modalRef = useRef(null);
+  const closeRef = useRef(onClose);
+  const submissionTimerRef = useRef(null);
+
+  closeRef.current = onClose;
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const previouslyFocused = document.activeElement;
+    document.body.style.overflow = 'hidden';
+    modalRef.current?.querySelector('button')?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        clearTimeout(submissionTimerRef.current);
+        submissionTimerRef.current = null;
+        setSubmitted(false);
+        closeRef.current();
+        return;
+      }
+
+      if (event.key !== 'Tab' || !modalRef.current) return;
+
+      const focusable = modalRef.current.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      clearTimeout(submissionTimerRef.current);
+      submissionTimerRef.current = null;
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      previouslyFocused?.focus?.();
+    };
+  }, [isOpen]);
+
+  useEffect(() => () => clearTimeout(submissionTimerRef.current), []);
+
+  const handleClose = () => {
+    clearTimeout(submissionTimerRef.current);
+    submissionTimerRef.current = null;
+    setSubmitted(false);
+    closeRef.current();
+  };
 
   if (!isOpen) return null;
 
@@ -24,18 +82,26 @@ export default function PilotModal({ isOpen, onClose, onSubmitted }) {
     if (onSubmitted) {
       onSubmitted(`Pilot proposal request sent for ${formData.collegeName || 'your institution'}!`);
     }
-    setTimeout(() => {
+    submissionTimerRef.current = setTimeout(() => {
+      submissionTimerRef.current = null;
       setSubmitted(false);
-      onClose();
+      closeRef.current();
     }, 2500);
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className="modal-overlay" onClick={handleClose}>
+      <div
+        className="modal-content"
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pilot-modal-title"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal-header">
-          <h3>Institutional Campus Pilot Request</h3>
-          <button className="modal-close" onClick={onClose} aria-label="Close modal">
+          <h3 id="pilot-modal-title">Institutional Campus Pilot Request</h3>
+          <button className="modal-close" onClick={handleClose} aria-label="Close modal">
             <X size={20} />
           </button>
         </div>

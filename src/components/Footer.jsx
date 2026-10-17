@@ -15,7 +15,7 @@ export default function Footer({ onOpenPilotModal }) {
           <h2>Arc Pair Academy</h2>
           <strong>Learn. Practice. Build. Don't just collect certificates — build skills.</strong>
           <p>
-            Neo-brutalist tech accelerator equipping engineering students and technical faculties with production-grade AI engineering, automation frameworks, and hands-on systems.
+            Practical AI education focused on helping college students understand, build, debug and showcase real AI applications.
           </p>
         </div>
 
@@ -23,9 +23,10 @@ export default function Footer({ onOpenPilotModal }) {
           <h3>Programs</h3>
           <nav>
             <Link to="/programs">AI Foundations</Link>
-            <Link to="/programs">AI App Development</Link>
-            <Link to="/programs">AI Automation Systems</Link>
-            <Link to="/workshops">Workshops & Bootcamps</Link>
+            <Link to="/programs">AI Application Development</Link>
+            <Link to="/programs">AI Projects &amp; Automation</Link>
+            <Link to="/workshops">1–2 Day Workshops</Link>
+            <Link to="/programs">12-Day Practical AI Cohort</Link>
           </nav>
         </div>
 
@@ -36,21 +37,28 @@ export default function Footer({ onOpenPilotModal }) {
               onClick={onOpenPilotModal} 
               style={{ background: 'none', border: 'none', color: '#ccc', textAlign: 'left', cursor: 'pointer', padding: 0, font: 'inherit' }}
             >
-              Free Pilot Workshop
+              Campus Pilot
             </button>
-            <Link to="/for-colleges">12-Day Bootcamp for TPOs</Link>
-            <Link to="/for-colleges">Campus Builder Program</Link>
-            <Link to="/contact">Institutional MOU Inquiry</Link>
+            <Link to="/workshops">1–2 Day Workshops</Link>
+            <Link to="/programs">12-Day Practical AI Cohort</Link>
+            <Link to="/for-colleges">Campus AI Programs</Link>
+            <Link to="/for-colleges">FDPs</Link>
+            <button
+              onClick={onOpenPilotModal}
+              style={{ background: 'none', border: 'none', color: '#ccc', textAlign: 'left', cursor: 'pointer', padding: 0, font: 'inherit' }}
+            >
+              Partner With Us
+            </button>
           </nav>
         </div>
 
         <div className="footer-column">
-          <h3>Platform & Engine</h3>
+          <h3>Academy</h3>
           <nav>
-            <Link to="/projects">Project Showcase</Link>
-            <Link to="/projects">Certificate Verification</Link>
-            <Link to="/about">Our Pedagogy</Link>
-            <Link to="/contact">Contact Academic Secretariat</Link>
+            <Link to="/about">About</Link>
+            <Link to="/#learning-framework">Learning Framework</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/contact">Contact</Link>
           </nav>
         </div>
       </div>

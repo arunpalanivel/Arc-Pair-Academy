@@ -143,7 +143,7 @@ export default function ForColleges({ onOpenPilotModal }) {
 
       {/* Institutional Request Form */}
       <section className="section" id="pilot-form">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '48px', alignItems: 'start' }}>
+        <div className="inquiry-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '48px', alignItems: 'start' }}>
           <div>
             <h2>Bring Production AI to Your Campus</h2>
             <p style={{ color: 'var(--muted)', fontSize: '16px' }}>

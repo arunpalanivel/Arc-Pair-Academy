@@ -61,6 +61,7 @@ export default function Programs({ onOpenPilotModal }) {
           {filteredModules.map((mod) => (
             <article
               key={mod.id}
+              className="program-module"
               style={{
                 background: 'var(--white)',
                 border: '3px solid var(--line)',
@@ -94,7 +95,7 @@ export default function Programs({ onOpenPilotModal }) {
                 </div>
               </div>
 
-              <div style={{ borderLeft: '2px solid var(--paper-deep)', paddingLeft: '32px' }}>
+              <div className="module-description" style={{ borderLeft: '2px solid var(--paper-deep)', paddingLeft: '32px' }}>
                 <h4 style={{ fontSize: '16px', textTransform: 'uppercase', marginBottom: '12px' }}>
                   Core Competencies & Lab Deliverables
                 </h4>
@@ -102,7 +103,7 @@ export default function Programs({ onOpenPilotModal }) {
                   {mod.details}
                 </p>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', fontSize: '14px' }}>
+                <div className="module-competencies" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', fontSize: '14px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <CheckCircle size={16} color="var(--green)" /> Terminal-based API exercises
                   </div>

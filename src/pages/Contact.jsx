@@ -48,7 +48,7 @@ export default function Contact() {
 
       {/* Inquiry Grid */}
       <section className="section">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '48px', alignItems: 'start' }}>
+        <div className="inquiry-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '48px', alignItems: 'start' }}>
           {/* Contact Details */}
           <div>
             <h2>Direct Communications</h2>

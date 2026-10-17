@@ -60,19 +60,19 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]`
   },
 
   proofPoints: [
-    { title: "Project-First", desc: "Every major concept leads to implementation." },
-    { title: "Build With Real Tools", desc: "Python + FastAPI + Ollama RAG + GitHub" },
+    { title: "Project-First", desc: "From concepts to implementation." },
+    { title: "Build With Real Tools", desc: "Python + FastAPI + Ollama + RAG" },
     { title: "Debug, Don't Copy", desc: "Students learn to inspect, break and fix their code" },
-    { title: "Show Your Work", desc: "Projects + GitHub Documentation + Demo" }
+    { title: "Show Your Work", desc: "Projects + Documentation + Demo" }
   ],
 
   pipelineStages: [
-    { id: "01", name: "Understand", label: "01 - Understand", desc: "Learn the concept." },
-    { id: "02", name: "Explore", label: "02 - Explore", desc: "Experiment with the technology." },
-    { id: "03", name: "Build", label: "03 - Build", desc: "Write the application." },
-    { id: "04", name: "Debug", label: "04 - Debug", desc: "Break it. Read the error. Fix it." },
-    { id: "05", name: "Extend", label: "05 - Extend", desc: "Add something more." },
-    { id: "06", name: "Showcase", label: "06 - Showcase", desc: "Document it, push it to GitHub and demonstrate it." }
+    { id: "01", name: "Understand", label: "01 - Understand", desc: "Understand the problem, requirements and basic architecture." },
+    { id: "02", name: "Explore", label: "02 - Explore", desc: "Work with AI tools and investigate possible approaches." },
+    { id: "03", name: "Build", label: "03 - Build", desc: "Implement a working application or project." },
+    { id: "04", name: "Debug", label: "04 - Debug", desc: "Test, reproduce and fix implementation problems." },
+    { id: "05", name: "Extend", label: "05 - Extend", desc: "Add features and improve the solution." },
+    { id: "06", name: "Showcase", label: "06 - Showcase", desc: "Explain, demonstrate and document the final result." }
   ],
 
   pedagogyStages: [
@@ -171,57 +171,27 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]`
   projects: [
     {
       id: "proj-1",
-      slug: "arc-pair/syllabus-tutor",
+      status: "Application concept",
       title: "College Syllabus Tutor",
-      desc: "A custom RAG system indexing a department's own syllabus, lecture notes, and 5 years of past university exam papers.",
+      desc: "A knowledge-based AI application that lets students interact with syllabus and course materials using document retrieval and RAG.",
       tags: ["LangChain", "pgvector", "FastAPI", "React"],
       category: "RAG",
-      repo: "https://github.com/arc-pair/syllabus-tutor"
     },
     {
       id: "proj-2",
-      slug: "arc-pair/resume-analyzer",
-      title: "Resume & Portfolio Analyzer",
-      desc: "Parses candidate PDFs and GitHub profile repositories, scoring project completeness against modern job descriptions.",
+      status: "Application concept",
+      title: "AI Resume Analyzer",
+      desc: "Analyzes resume content and compares skills and experience with a job description to highlight areas for improvement.",
       tags: ["FastAPI", "Docker", "Python", "LLM Eval"],
       category: "FastAPI",
-      repo: "https://github.com/arc-pair/resume-analyzer"
     },
     {
       id: "proj-3",
-      slug: "arc-pair/support-agent",
-      title: "Institutional Support Agent",
-      desc: "Answers complex student queries 24/7 by retrieving verified guidelines from a college's official handbook.",
-      tags: ["Agents", "Webhooks", "LangChain", "Qdrant"],
-      category: "Agents",
-      repo: "https://github.com/arc-pair/support-agent"
-    },
-    {
-      id: "proj-4",
-      slug: "arc-pair/code-auditor",
-      title: "Automated Code Auditor",
-      desc: "GitHub Action workflow bot that analyzes pull requests for security flaws, syntax bugs, and test coverage gaps.",
-      tags: ["GitHub Actions", "Docker", "Python", "AST"],
-      category: "Docker",
-      repo: "https://github.com/arc-pair/code-auditor"
-    },
-    {
-      id: "proj-5",
-      slug: "arc-pair/exam-generator",
-      title: "Question Paper Synthesizer",
-      desc: "Generates Bloom's taxonomy balanced university question papers with automatic marking rubrics.",
-      tags: ["FastAPI", "Pydantic", "Prompt Eng"],
-      category: "FastAPI",
-      repo: "https://github.com/arc-pair/exam-generator"
-    },
-    {
-      id: "proj-6",
-      slug: "arc-pair/research-assistant",
-      title: "Faculty Research Paper Copilot",
-      desc: "Indexes arXiv and IEEE papers to auto-generate literature reviews and extract core methodology charts.",
-      tags: ["RAG", "LangChain", "Vector DB"],
-      category: "RAG",
-      repo: "https://github.com/arc-pair/research-assistant"
+      status: "Coming with the first cohort",
+      title: "Student Capstone",
+      desc: "Students will develop a practical AI application addressing a real-world problem using concepts covered during the cohort.",
+      tags: ["AI Applications", "Guided Projects", "Student Showcase"],
+      category: "Student Capstone",
     }
   ],
 

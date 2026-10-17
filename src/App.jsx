@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PilotModal from './components/PilotModal';
@@ -13,10 +13,15 @@ import Contact from './pages/Contact';
 
 // Scroll to top helper component
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const target = hash ? document.getElementById(hash.slice(1)) : null;
+    if (target) {
+      target.scrollIntoView();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 }
 
@@ -46,6 +51,7 @@ export default function App() {
           <Route path="/workshops" element={<Workshops onOpenPilotModal={() => setIsPilotModalOpen(true)} />} />
           <Route path="/about" element={<About onOpenPilotModal={() => setIsPilotModalOpen(true)} />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 
